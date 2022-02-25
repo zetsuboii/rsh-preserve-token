@@ -1,7 +1,7 @@
 'reach 0.1'; 
 
-import { TokenPreserver, preserveToken } from "preserveToken.rsh";
-
+import { TokenPreserver, preserveToken } from
+  "@github.com:Zetsuboii/rpkg-preserve-token#v0.1.8:preserveToken.rsh";
 /**
  * This is an example program that creates a new Token, transfers the supply to
  * Alice and keeps token alive by calling preserverToken()
