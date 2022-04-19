@@ -2,6 +2,7 @@
 
 import { TokenPreserver, preserveToken } from
   "@github.com:Zetsuboii/rpkg-preserve-token#v0.1.8:preserveToken.rsh";
+
 /**
  * This is an example program that creates a new Token, transfers the supply to
  * Alice and keeps token alive by calling preserverToken()
@@ -36,7 +37,10 @@ export const main = Reach.App(() => {
   transfer(supply, token).to(Alice);
 
   // Call the function at the end
-  preserveToken(Alice, token);
+  preserveToken({ 
+    preserver: Alice, 
+    token: token 
+  });
   commit();
   exit();
 });

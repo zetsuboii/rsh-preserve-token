@@ -23,18 +23,18 @@ const TokenPreserver = {
  * Halts the execution keeping token alive
  * Use it at the end of the Reach.App callback to preserve the token
  * 
- * Precondition: preserver extends TokenPreserver interface
- * Precondition: balance() is 0 when called
- * Precondition: token is the only token in the contract
- * Postcondition: token isn't destroyed, application is halted
+ * @pre preserver extends TokenPreserver interface
+ * @pre balance() is 0 when called
+ * @pre token is the only token in the contract
+ * @post token isn't destroyed, application is halted
  * 
  * @param preserver: Participant to preserve the token
  * @param token: Token to preserve
  * @param supply: Supply of the token
  * 
- * NOTE: You don't need to implement the halt function in your front-end
+ * @note You don't need to implement the halt function in your front-end
  */
-function preserveToken(preserver, token)
+function preserveToken({ preserver, token })
 {
   var [] = [];
   invariant(
